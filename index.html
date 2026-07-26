@@ -72,14 +72,14 @@
   .card-media { position: absolute; inset: 0; overflow: hidden; }
   .card-thumb { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
   .card-media::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.35s ease; }
-  .work-card:hover .card-thumb { transform: scale(1.06); }
-  .work-card:hover .card-media::after { background: rgba(0,0,0,0.55); }
+  .work-card:hover .card-thumb { transform: scale(1.04); }
+  .work-card:hover .card-media::after { background: rgba(0,0,0,0.3); }
   .card-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-  .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.4) 50%, transparent 100%); opacity: 0; transition: opacity 0.3s; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem; }
+  .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.97) 0%, rgba(8,8,8,0.8) 50%, rgba(8,8,8,0.3) 100%); opacity: 0; transition: opacity 0.3s; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem; }
   .card-overlay-always { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.8) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem; pointer-events: none; opacity: 1; transition: opacity 0.3s ease; }
   .card-tag { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
   .card-title { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.04em; color: var(--text); line-height: 1.1; }
-  .card-desc { font-size: 0.78rem; color: rgba(240,237,230,0.6); margin-top: 0.4rem; line-height: 1.5; }
+  .card-desc { font-size: 0.75rem; color: rgba(240,237,230,0.75); margin-top: 0.4rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   .card-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.8rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
   .card-link:hover { border-bottom-color: var(--accent); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
@@ -246,19 +246,27 @@
   <div class="skill-panel" id="panel-threed">
     <div class="work-grid">
       <div class="work-card reveal">
-        <div class="card-placeholder td-bg"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="opacity:0.22;"><polygon points="40,10 68,30 68,60 40,72 12,60 12,30" stroke="#64a0c8" stroke-width="1.5" fill="none"/><polygon points="40,10 68,30 40,40" stroke="#64a0c8" stroke-width="0.7" fill="none" opacity="0.5"/><polygon points="40,10 12,30 40,40" stroke="#64a0c8" stroke-width="0.7" fill="none" opacity="0.5"/></svg></div>
-        <div class="card-overlay-always"><div class="card-tag">3D Modeling</div><div class="card-title">Project Title Here</div></div>
-        <div class="card-overlay"><div class="card-tag">3D Modeling · 2024</div><div class="card-title">Project Title</div><p class="card-desc">Description</p><a href="#" class="card-link">View Project →</a></div>
+        <div class="card-media"><img src="https://drive.google.com/thumbnail?id=1E-fuMODNLqXWdfbNgyO5Tn7Qc7vBhG6_&sz=w800" class="card-thumb" alt="Kellogs Ad thumbnail"/></div>
+        <div class="card-overlay-always"><div class="card-tag">3D Animation</div><div class="card-title">Kellogs Ad</div></div>
+        <div class="card-overlay">
+          <div class="card-tag">3D Animation · 2024</div><div class="card-title">Kellogs Ad</div>
+          <p class="card-desc">Description coming soon.</p>
+          <a href="https://drive.google.com/file/d/1E-fuMODNLqXWdfbNgyO5Tn7Qc7vBhG6_/preview" target="_blank" class="card-link">View Project →</a>
+        </div>
       </div>
       <div class="work-card reveal reveal-delay-1">
-        <div class="card-placeholder td-bg" style="background:linear-gradient(135deg,#060810,#0a0f18,#060810);"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="opacity:0.22;"><rect x="20" y="20" width="40" height="40" stroke="#64a0c8" stroke-width="1.5" fill="none"/><line x1="20" y1="20" x2="10" y2="10" stroke="#64a0c8" stroke-width="0.8"/><line x1="60" y1="20" x2="70" y2="10" stroke="#64a0c8" stroke-width="0.8"/><line x1="60" y1="60" x2="70" y2="70" stroke="#64a0c8" stroke-width="0.8"/><line x1="20" y1="60" x2="10" y2="70" stroke="#64a0c8" stroke-width="0.8"/></svg></div>
-        <div class="card-overlay-always"><div class="card-tag">3D Animation</div><div class="card-title">Project Title</div></div>
-        <div class="card-overlay"><div class="card-tag">3D Animation · 2024</div><div class="card-title">Project Title</div><p class="card-desc">Description</p><a href="#" class="card-link">View Project →</a></div>
+        <div class="card-media"><img src="https://drive.google.com/thumbnail?id=1Kdl3Yv8ZP_LclQ2lo6aVB2sohLM9F2_Q&sz=w800" class="card-thumb" alt="Evian Collab Ad thumbnail"/></div>
+        <div class="card-overlay-always"><div class="card-tag">3D Animation</div><div class="card-title">Evian Collab Ad</div></div>
+        <div class="card-overlay">
+          <div class="card-tag">3D Animation · 2024</div><div class="card-title">Evian Collab Ad</div>
+          <p class="card-desc">Description coming soon.</p>
+          <a href="https://drive.google.com/file/d/1Kdl3Yv8ZP_LclQ2lo6aVB2sohLM9F2_Q/preview" target="_blank" class="card-link">View Project →</a>
+        </div>
       </div>
       <div class="work-card reveal reveal-delay-2">
-        <div class="card-placeholder td-bg" style="background:linear-gradient(135deg,#050a0c,#0a1215,#050a0c);"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="opacity:0.22;"><ellipse cx="40" cy="40" rx="30" ry="14" stroke="#64a0c8" stroke-width="1.5"/><ellipse cx="40" cy="40" rx="18" ry="30" stroke="#64a0c8" stroke-width="1.5"/><circle cx="40" cy="40" r="6" stroke="#64a0c8" stroke-width="1"/></svg></div>
+        <div class="card-media"><img src="https://drive.google.com/thumbnail?id=1mNbttEIrLfrZKgc3TRElg-uIShoKlEOY&sz=w800" class="card-thumb" alt="Project thumbnail"/></div>
         <div class="card-overlay-always"><div class="card-tag">Character / VFX</div><div class="card-title">Project Title</div></div>
-        <div class="card-overlay"><div class="card-tag">Character / VFX · 2023</div><div class="card-title">Project Title</div><p class="card-desc">Description</p><a href="#" class="card-link">View Project →</a></div>
+        <div class="card-overlay"><div class="card-tag">Character / VFX · 2023</div><div class="card-title">Project Title</div><p class="card-desc">Description</p><a href="https://drive.google.com/file/d/1mNbttEIrLfrZKgc3TRElg-uIShoKlEOY/preview" target="_blank" class="card-link">View Project →</a></div>
       </div>
     </div>
   </div>

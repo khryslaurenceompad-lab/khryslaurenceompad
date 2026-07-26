@@ -159,7 +159,7 @@
   .work-row {
     display: grid;
     grid-template-columns: 48px 1fr 160px 120px 80px;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
     padding: 1.4rem 1.5rem;
     border: 1px solid var(--border);
@@ -182,11 +182,18 @@
   .work-row:hover .row-thumb { opacity: 1; transform: scale(1); }
   .work-row:hover .row-num { color: var(--accent); }
   .work-row:hover .row-arrow { transform: translateX(4px); opacity: 1; }
+  .work-row:hover .row-desc {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    display: block;
+    color: var(--text-muted);
+  }
 
   .row-num {
     font-family: var(--font-mono); font-size: 0.6rem;
     color: var(--text-dim); letter-spacing: 0.1em;
     transition: color 0.25s;
+    padding-top: 0.2rem;
   }
   .row-info { display: flex; flex-direction: column; gap: 0.2rem; }
   .row-title {
@@ -195,9 +202,10 @@
   }
   .row-desc {
     font-size: 0.78rem; color: var(--text-muted);
-    font-weight: 300; line-height: 1.4;
+    font-weight: 300; line-height: 1.6;
     display: -webkit-box; -webkit-line-clamp: 1;
     -webkit-box-orient: vertical; overflow: hidden;
+    transition: color 0.25s;
   }
   .row-category {
     font-family: var(--font-mono); font-size: 0.6rem;
@@ -254,9 +262,13 @@
     text-decoration: none;
     display: block;
     background: var(--bg3);
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, aspect-ratio 0.4s ease;
   }
-  .grid-card:hover { border-color: var(--border-hover); }
+  .grid-card:hover {
+    border-color: var(--border-hover);
+    aspect-ratio: unset;
+    min-height: 320px;
+  }
   .grid-card:hover .gc-thumb { transform: scale(1.06); }
   .grid-card:hover .gc-overlay { opacity: 1; }
   .grid-card:hover .gc-always { opacity: 0; }
@@ -281,10 +293,11 @@
   }
   .gc-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.5) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(8,8,8,0.97) 0%, rgba(8,8,8,0.8) 50%, rgba(8,8,8,0.3) 100%);
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: 1.2rem;
     opacity: 0; transition: opacity 0.3s;
+    overflow: visible;
   }
   .gc-tag {
     font-family: var(--font-mono); font-size: 0.58rem;
@@ -296,10 +309,9 @@
     letter-spacing: 0.04em; color: var(--text); line-height: 1.1;
   }
   .gc-desc {
-    font-size: 0.75rem; color: rgba(240,237,230,0.6);
-    margin-top: 0.4rem; line-height: 1.5;
-    display: -webkit-box; -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical; overflow: hidden;
+    font-size: 0.75rem; color: rgba(240,237,230,0.75);
+    margin-top: 0.4rem; line-height: 1.6;
+    overflow: visible;
   }
   .gc-link {
     display: inline-flex; align-items: center; gap: 0.4rem;
@@ -531,33 +543,33 @@ const projects = [
     id: 20,
     category: "threed",
     categoryLabel: "3D / Animation",
-    year: "2024",
-    title: "Project Title",
-    desc: "Add your 3D modeling project description here.",
-    thumb: "",
-    link: "#",
-    type: "3D Modeling"
+    year: "2026",
+    title: "Kellogs Ad",
+    desc: "A 3D concept advertisement for a fruit-based Kellogg's product. I modeled, animated, and edited the project, creating a vibrant and engaging commercial that showcases the product through dynamic visuals and polished storytelling.",
+    thumb: "https://drive.google.com/thumbnail?id=1E-fuMODNLqXWdfbNgyO5Tn7Qc7vBhG6_&sz=w800",
+    link: "https://drive.google.com/file/d/1E-fuMODNLqXWdfbNgyO5Tn7Qc7vBhG6_/preview",
+    type: "3D Animation"
   },
   {
     id: 21,
     category: "threed",
     categoryLabel: "3D / Animation",
-    year: "2024",
-    title: "Project Title",
-    desc: "Add your 3D animation project description here.",
-    thumb: "",
-    link: "#",
+    year: "2026",
+    title: "Evian Collab Ad",
+    desc: "A concept advertisement imagining a collaboration between a local artist and Evian. I was responsible for the video editing, focusing on composition, pacing, and visual storytelling to create a polished and engaging brand campaign.",
+    thumb: "https://drive.google.com/thumbnail?id=1Kdl3Yv8ZP_LclQ2lo6aVB2sohLM9F2_Q&sz=w800",
+    link: "https://drive.google.com/file/d/1Kdl3Yv8ZP_LclQ2lo6aVB2sohLM9F2_Q/preview",
     type: "3D Animation"
   },
   {
     id: 22,
     category: "threed",
     categoryLabel: "3D / Animation",
-    year: "2023",
-    title: "Project Title",
-    desc: "Add your character/VFX project description here.",
-    thumb: "",
-    link: "#",
+    year: "2026",
+    title: "Acting Study",
+    desc: "A 3D character acting study focused on conveying emotion, personality, and body language through animation. This project highlights my understanding of timing, weight, facial expressions, and performance to create a believable and engaging character.",
+    thumb: "https://drive.google.com/thumbnail?id=1mNbttEIrLfrZKgc3TRElg-uIShoKlEOY&sz=w800",
+    link: "https://drive.google.com/file/d/1mNbttEIrLfrZKgc3TRElg-uIShoKlEOY/preview",
     type: "Character / VFX"
   },
 ];
